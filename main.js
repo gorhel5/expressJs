@@ -8,7 +8,6 @@ app.use(express.urlencoded({
     extended: false
 }))
 
-
 app.get('/', (req, res) => {
     res.render('index')
 })
@@ -40,6 +39,11 @@ app.post('/check-user', (req, res) => {
     else 
         return res.redirect('/user/' + username)
 })
+
+app.use((req, res) => {
+    res.status(404).render('error')
+})
+
 
 app.listen(3000, () => {
     console.log('Server started: http://localhost:3000');

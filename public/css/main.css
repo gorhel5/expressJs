@@ -27,14 +27,17 @@ header span {
     color: #fcfcfc;
 }
 
-header nav a {
+a {
     color: #fff;
     text-decoration: none;
     margin-left: 15px;
 }
-
-header nav a:hover {
+a:hover {
     text-decoration: underline;
+}
+
+.er {
+    margin: unset;
 }
 
 header input {
